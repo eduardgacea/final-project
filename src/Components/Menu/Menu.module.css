@@ -9,14 +9,14 @@
   gap: 1rem;
 }
 
-
 .menu {
   gap: 2rem;
   position: sticky;
   align-self: start;
   top: 1rem;
   overflow-y: auto;
-  max-height: 100vh;
+  overflow-x: hidden;
+  max-height: 90vh;
 }
 
 .logout {
@@ -59,10 +59,6 @@
     flex-direction: row;
   }
 
-  .menu{
-    justify-content: space-between;
-  }
-
   .logo {
     margin: 0;
     margin-right: 4px;
@@ -79,22 +75,42 @@
     font-weight: 500;
     cursor: pointer;
     transition: all 0s;
-    background-color: rgb(22,24,28);
+    background-color: rgb(22, 24, 28);
     margin-right: 1rem;
   }
 
   .menu {
     position: fixed;
+    top: auto;
     bottom: 0;
     left: 0;
+    right: 0;
     background-color: rgb(50, 50, 65);
-    width: 100%;
     padding-left: 0.25rem;
+    height: 60px;
+    justify-content: space-between;
   }
 }
 
 @media screen and (max-width: 378px) {
-  .menu{
+  .menu {
     gap: 0;
   }
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 2rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
