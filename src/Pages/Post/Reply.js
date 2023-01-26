@@ -1,22 +1,11 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faComment, faRetweet, faHeart, faChartSimple, faBookmark } from '@fortawesome/free-solid-svg-icons';
 import classes from './Reply.module.css';
-import { useContext } from 'react';
-import { TweetContext } from '../../Contexts/TweetContext';
 import { Link } from 'react-router-dom';
 import DateElement from '../../Tweet/DateElement';
 
 export default function Reply(props) {
-  const { toggleLikeReply, toggleBookmarkReply } = useContext(TweetContext);
   const iconSize = 'lg';
-
-  const handleReplyBookmark = () => {
-    toggleBookmarkReply(props.tweet , props.reply);
-  };
-
-  const handleReplyLike = () => {
-    toggleLikeReply(props.tweet , props.reply);
-  };
 
   return (
     <div className={classes.tweet}>
@@ -48,7 +37,7 @@ export default function Reply(props) {
             </button>
           </div>
           <div className={classes.action}>
-            <button className={`${classes.like} ${props.reply.isLiked ? classes.likeOn : classes.likeOff}`} onClick={handleReplyLike}>
+            <button className={`${classes.like} ${props.reply.isLiked ? classes.likeOn : classes.likeOff}`} >
               <FontAwesomeIcon
                 className={`${classes.iconLike} ${props.reply.isLiked ? classes.iconLikeOn : classes.iconLikeOff}`}
                 inverse
@@ -65,7 +54,7 @@ export default function Reply(props) {
             </button>
           </div>
           <div className={classes.action}>
-            <button className={`${classes.bookmark} ${props.reply.isBookmarked ? classes.bookmarkOn : classes.bookmarkOff}`} onClick={handleReplyBookmark}>
+            <button className={`${classes.bookmark} ${props.reply.isBookmarked ? classes.bookmarkOn : classes.bookmarkOff}`} >
               <FontAwesomeIcon
                 className={`${classes.iconBookmark} ${props.reply.isBookmarked ? classes.iconBookmarkOn : classes.iconBookmarkOff}`}
                 inverse
