@@ -1,0 +1,98 @@
+.menu,
+.top,
+.bot {
+  display: flex;
+  flex-direction: column;
+}
+
+.bot {
+  gap: 1rem;
+}
+
+
+.menu {
+  gap: 2rem;
+  position: sticky;
+  align-self: start;
+  top: 1rem;
+}
+
+.logout {
+  background-color: rgb(50, 50, 65);
+}
+
+.logout:hover {
+  background-color: black;
+  box-shadow: inset 0px 0px 3px rgb(29, 155, 240);
+  color: rgb(29, 155, 240);
+  font-weight: 700;
+  font-family: Roboto;
+}
+
+.logo {
+  width: 50px;
+  margin-left: 0.75rem;
+  margin-bottom: 1.25rem;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 720px) {
+  .logo {
+    width: 30px;
+  }
+  .menu {
+    align-items: center;
+  }
+
+  .toggleTheme,
+  .logout {
+    font-size: 0.75rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .top,
+  .bot,
+  .menu {
+    flex-direction: row;
+  }
+
+  .menu{
+    justify-content: space-between;
+  }
+
+  .logo {
+    margin: 0;
+    margin-right: 4px;
+  }
+
+  .logout {
+    border: none;
+    outline: none;
+    background-color: rgb(29, 155, 240);
+    color: white;
+    border-radius: 1rem;
+    padding: 0.5rem 0.75rem;
+    font-family: Roboto;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0s;
+    background-color: rgb(22,24,28);
+    margin-right: 1rem;
+  }
+
+  .menu {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(50, 50, 65);
+    width: 100%;
+    padding-left: 0.25rem;
+  }
+}
+
+@media screen and (max-width: 378px) {
+  .menu{
+    gap: 0;
+  }
+}

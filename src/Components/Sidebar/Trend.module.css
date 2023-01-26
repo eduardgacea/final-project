@@ -1,0 +1,55 @@
+.trend {
+  display: inline-flex;
+  justify-content: space-between;
+  padding: 0.6rem 1rem;
+}
+
+.trend:hover {
+  background-color: rgb(36, 38, 44);
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+}
+
+.category,
+.title,
+.stats,
+.more {
+  margin: 0.25rem;
+  font-family: Roboto;
+  cursor: pointer;
+}
+
+.category,
+.stats,
+.more {
+  color: rgb(113, 118, 123);
+}
+
+.category:hover,
+.title:hover,
+.stats:hover {
+  text-decoration: underline;
+}
+
+.category {
+  font-size: 0.80rem;
+}
+
+.title {
+  color: white;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.stats {
+  font-size: 0.90rem;
+}
+
+.more {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: -12px;
+}

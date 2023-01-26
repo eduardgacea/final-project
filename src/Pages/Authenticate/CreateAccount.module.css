@@ -1,0 +1,144 @@
+.form {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  background-color: rgb(80, 80, 90);
+  padding: 1.5rem;
+  align-items: flex-start;
+  width: 25vw;
+  font-family: Roboto;
+  border-radius: 0.75rem;
+  border: 2px solid rgb(150, 150, 150);
+}
+
+.backdrop{
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+}
+
+.titleWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: rgb(29, 155, 240);
+  letter-spacing: 1.25px;
+}
+
+.logo {
+  width: 50px;
+}
+
+.inputGroup {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.inputGroup label {
+  font-size: 1.25rem;
+  font-weight: 500;
+  letter-spacing: 0.75px;
+  color: white;
+}
+
+.inputGroup input {
+  outline: none;
+  font-size: 1.15rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.75rem;
+  border: none;
+  font-family: Roboto;
+  width: 65%;
+  letter-spacing: 1px;
+  color: white;
+  background-color: rgb(50,50,65);
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  width: 100%;
+}
+
+.action {
+  cursor: pointer;
+  width: 100%;
+}
+
+.invalid {
+  background-color: rgb(25,25,25) !important;
+}
+
+@media screen and (max-width: 1650px) {
+  .form {
+    padding: 0.75rem;
+  }
+
+  .title {
+    font-size: 1.25rem;
+  }
+  .logo {
+    width: 34px;
+  }
+
+  .inputGroup {
+    justify-content: space-between;
+    gap: 0.5rem;
+  }
+
+  .inputGroup input {
+    letter-spacing: normal;
+    padding: 0.15rem 0.35rem;
+    font-size: 0.95rem;
+  }
+
+  .inputGroup label {
+    font-size: 0.95rem;
+  }
+
+  .action {
+    font-size: 0.75rem !important;
+    padding-left: 0rem !important;
+    padding-right: 0rem !important;
+    align-self: center;
+  }
+
+}
+
+@media screen and (max-width: 1090px) {
+  .form{
+    padding: 0.5rem;
+    width: 227.5px;
+  }
+  
+  .title{
+    font-size: 1rem;
+  }
+
+  .inputGroup {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .inputGroup input{
+    padding: 0.15rem 0.25rem;
+    width: 90%;
+  }
+
+  .logo {
+    width: 20px;
+  }
+}

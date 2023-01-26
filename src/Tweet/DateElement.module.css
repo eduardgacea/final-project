@@ -1,0 +1,12 @@
+.date {
+  font-family: Roboto;
+  color: rgb(113, 118, 123);
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+}
+
+@media screen and (max-width: 378px) {
+  .date{
+    font-size: 0.75rem;
+  }
+}

@@ -1,0 +1,175 @@
+.tweet {
+  display: flex;
+  gap: 1rem;
+  border: 1px solid rgba(200, 240, 255, 0.2);
+  border-bottom: none;
+  padding: 1.25rem 2rem;
+  padding-left: 1rem;
+  max-width: 100%;
+  word-break: break-all;
+  cursor: pointer;
+}
+
+.tweet:hover{
+  background-color: rgb(22, 24, 28);
+}
+
+.tweetContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  width: 100%;
+}
+
+.profileImg {
+  border-radius: 100%;
+  width: 50px;
+  cursor: pointer;
+}
+
+.action button {
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: white;
+  font-family: Roboto;
+  color: rgb(113, 118, 123);
+}
+
+.action .reply:hover {
+  color: rgb(29, 155, 240);
+}
+
+.action .reply:hover .iconReply {
+  color: rgb(29, 155, 240);
+  border-radius: 100%;
+  box-shadow: 0 0 4px 8px rgba(29, 155, 240, 0.25);
+  background-color: rgba(29, 155, 240, 0.25);
+}
+
+.action .retweet:hover {
+  color: rgb(29, 240, 155);
+}
+
+.action .retweet:hover .iconRetweet {
+  color: rgb(29, 240, 155);
+  border-radius: 100%;
+  box-shadow: 0 0 4px 8px rgba(29, 240, 155, 0.25);
+  background-color: rgba(29, 240, 155, 0.25);
+}
+
+.action .like:hover {
+  color: rgb(240, 29, 155);
+}
+
+.action .like:hover .iconLike {
+  color: rgb(240, 29, 155);
+  border-radius: 100%;
+  box-shadow: 0 0 4px 8px rgba(240, 29, 155, 0.25);
+  background-color: rgba(240, 29, 155, 0.25);
+}
+
+.action .views:hover {
+  color: rgb(29, 155, 240);
+}
+
+.action .views:hover .iconViews {
+  color: rgb(29, 155, 240);
+  border-radius: 100%;
+  box-shadow: 0 0 4px 8px rgba(29, 155, 240, 0.25);
+  background-color: rgba(29, 155, 240, 0.25);
+}
+
+.action .bookmark:hover {
+  color: rgb(29, 155, 240);
+}
+
+.action .bookmark:hover .iconBookmark {
+  color: rgb(29, 155, 240);
+  border-radius: 100%;
+  box-shadow: 0 0 4px 8px rgba(29, 155, 240, 0.25);
+  background-color: rgba(29, 155, 240, 0.25);
+}
+
+/*  */
+.bookmarkOn {
+  color: rgb(29, 155, 240);
+}
+
+.bookmarkOn .iconBookmarkOn {
+  color: rgb(29, 155, 240);
+  border-radius: 100%;
+  box-shadow: 0 0 4px 8px rgba(29, 155, 240, 0.25);
+  background-color: rgba(29, 155, 240, 0.25);
+}
+/*  */
+
+/*  */
+
+.action .likeOn {
+  color: rgb(240, 29, 155);
+}
+
+.likeOn {
+  color: rgb(240, 29, 155);
+}
+
+.likeOn .iconLikeOn {
+  color: rgb(240, 29, 155);
+  border-radius: 100%;
+  box-shadow: 0 0 4px 8px rgba(240, 29, 155, 0.25);
+  background-color: rgba(240, 29, 155, 0.25);
+}
+
+/*  */
+
+.header {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.author,
+.username,
+.body {
+  font-family: Roboto;
+  color: white;
+}
+
+.actions {
+  margin-top: 0.4rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.author {
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.author:hover {
+  text-decoration: underline;
+}
+
+.username,
+.postDate {
+  color: rgb(113, 118, 123);
+  font-size: 0.9rem;
+}
+
+.body {
+  line-height: 22px;
+  font-size: 0.95rem;
+}
+
+.iconReply,
+.iconRetweet,
+.iconLike,
+.iconViews,
+.iconBookmark {
+  color: rgb(113, 118, 123);
+}

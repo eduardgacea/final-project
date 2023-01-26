@@ -1,0 +1,32 @@
+.searchbar {
+  display: flex;
+  align-items: center;
+  background-color: rgb(22, 24, 28);
+  width: 100%;
+  margin-bottom: 2rem;
+  border-radius: 2rem;
+  padding: 0.75rem 0rem;
+}
+
+.activeInput {
+  width: 100%;
+  background-color: rgb(22, 24, 28);
+  outline: none;
+  border: none;
+  border-radius: 1rem;
+  color: white;
+  font-family: Roboto;
+  font-size: 1rem;
+}
+
+.activeInput::placeholder {
+  font-family: Roboto;
+  font-size: 1rem;
+}
+
+.icon {
+  padding: 0rem 0.75rem;
+  padding-right: 0.5rem;
+  width: 7%;
+  cursor: pointer;
+}

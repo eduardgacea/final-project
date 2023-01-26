@@ -1,0 +1,18 @@
+.items{
+  list-style: none;
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  color: rgb(80,80,90);
+  font-family: Roboto;
+  font-size: 0.80rem;
+  padding-left: 0.25rem;
+}
+
+.item{
+  cursor: pointer;
+}
+
+.item:hover{
+  text-decoration: underline;
+}

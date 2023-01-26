@@ -1,0 +1,68 @@
+.form {
+  display: flex;
+  gap: 1rem;
+  border: 1px solid rgba(200, 240, 255, 0.2);
+  border-bottom: none;
+  padding: 1.5rem 2rem;
+  padding-left: 1rem;
+  align-items: center;
+  background-color: rgb(22, 24, 28);
+  border-radius: 2rem 2rem 0rem 0rem;
+}
+
+.profileImg {
+  border-radius: 50%;
+  width: 50px;
+}
+
+.inputContainer {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+
+.inputContainer input {
+  outline: none;
+  font-size: 1.15rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.75rem;
+  border: none;
+  letter-spacing: 1.25px;
+  color: white;
+  background-color: transparent;
+  font-family: Roboto;
+  background-color: rgb(50, 50, 65);
+}
+
+.notComposing {
+  justify-content: flex-end;
+}
+
+.cancel,
+.notComposing button {
+  background-color: rgb(50, 50, 65);
+}
+
+.cancel:hover,
+.notComposing button:hover {
+  background-color: black;
+  box-shadow: inset 0px 0px 3px rgb(29, 155, 240);
+  color: rgb(29, 155, 240);
+  font-weight: 700;
+  font-family: Roboto;
+}
+
+.composing button:hover {
+  background-color: black;
+  box-shadow: inset 0px 0px 3px rgb(29, 155, 240);
+  color: rgb(29, 155, 240);
+  font-weight: 700;
+  font-family: Roboto;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+}

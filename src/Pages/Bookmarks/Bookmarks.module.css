@@ -1,0 +1,25 @@
+.title {
+  color: white;
+  font-family: Roboto;
+  background-color: rgb(22, 24, 28);
+  margin: 0;
+  padding: 1.25rem;
+  border: 1px solid rgba(200, 240, 255, 0.2);
+  border-bottom: none;
+  border-radius: 2rem 2rem 0rem 0rem;
+}
+
+.border {
+  border: 1px solid rgba(200, 240, 255, 0.2);
+  border-bottom: none;
+}
+
+.defaultTitle {
+  color: white;
+  font-family: Roboto;
+  background-color: rgb(22, 24, 28);
+  margin: 0;
+  padding: 2rem 1.25rem;
+  border: 1px solid rgba(200, 240, 255, 0.2);
+  border-radius: 2rem 2rem 0rem 0rem;
+}

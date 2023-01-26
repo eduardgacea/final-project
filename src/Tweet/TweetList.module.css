@@ -1,0 +1,8 @@
+.tweetList{
+  display: flex;
+  flex-direction: column;
+}
+
+.border{
+  border-bottom: 1px solid rgba(200, 240, 255, 0.2);
+}
