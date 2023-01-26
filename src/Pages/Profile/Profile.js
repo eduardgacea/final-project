@@ -25,21 +25,21 @@ const formReducer = (state, action) => {
 export default function Profile() {
   const { createdUser, setCreatedUser } = useContext(UserContext);
 
-  useEffect(() => {
-    setCreatedUser({
-      id: '-1',
-      name: localStorage.getItem('name'),
-      username: `@${localStorage.getItem('username')}`,
-      password: localStorage.getItem('password'),
-      email: localStorage.getItem('email'),
-      joinDate: localStorage.getItem('joinDate'),
-      img: 'https://randomuser.me/api/portraits/men/62.jpg',
-      bio: localStorage.getItem('bio') ? localStorage.getItem('bio') : '',
-      location: localStorage.getItem('location') ? localStorage.getItem('location') : '',
-      followers: [],
-      following: [],
-    });
-  }, []);
+  // useEffect(() => {
+  //   setCreatedUser({
+  //     id: '-1',
+  //     name: localStorage.getItem('name'),
+  //     username: `@${localStorage.getItem('username')}`,
+  //     password: localStorage.getItem('password'),
+  //     email: localStorage.getItem('email'),
+  //     joinDate: localStorage.getItem('joinDate'),
+  //     img: 'https://randomuser.me/api/portraits/men/62.jpg',
+  //     bio: localStorage.getItem('bio') ? localStorage.getItem('bio') : '',
+  //     location: localStorage.getItem('location') ? localStorage.getItem('location') : '',
+  //     followers: [],
+  //     following: [],
+  //   });
+  // }, [createdUser.following]);
 
   const { myTweets, likedTweets } = useContext(TweetContext);
   const [isEditing, setIsEditing] = useState(false);
