@@ -23,18 +23,31 @@ const formReducer = (state, action) => {
 };
 
 export default function Profile() {
-  
-  
   const { createdUser, setCreatedUser } = useContext(UserContext);
+
+  useEffect(() => {
+    setCreatedUser({
+      id: '-1',
+      name: localStorage.getItem('name'),
+      username: `@${localStorage.getItem('username')}`,
+      password: localStorage.getItem('password'),
+      email: localStorage.getItem('email'),
+      joinDate: localStorage.getItem('joinDate'),
+      img: 'https://randomuser.me/api/portraits/men/62.jpg',
+      bio: localStorage.getItem('bio') ? localStorage.getItem('bio') : '',
+      location: localStorage.getItem('location') ? localStorage.getItem('location') : '',
+      followers: [],
+      following: [],
+    });
+  }, []);
+
   const { myTweets, likedTweets } = useContext(TweetContext);
   const [isEditing, setIsEditing] = useState(false);
   const [showingMyTweets, setShowingMyTweets] = useState(true);
-
   const [formState, dispatch] = useReducer(formReducer, { name: '', bio: '', location: '' });
-
-  const day = createdUser.joinDate.toLocaleString('en-US', { day: '2-digit' });
-  const month = createdUser.joinDate.toLocaleString('en-US', { month: 'short' });
-  const year = createdUser.joinDate.toLocaleString('en-US', { year: 'numeric' });
+  const day = new Date(Date.parse(createdUser.joinDate)).toLocaleString('en-US', { day: '2-digit' });
+  const month = new Date(Date.parse(createdUser.joinDate)).toLocaleString('en-US', { month: 'short' });
+  const year = new Date(Date.parse(createdUser.joinDate)).toLocaleString('en-US', { year: 'numeric' });
 
   const nameChangeHandler = (event) => {
     dispatch({ type: 'NAME_CHANGE', payload: event.target.value });

@@ -16,7 +16,7 @@ export default function UserContextProvider(props) {
     username: `@${localStorage.getItem('username')}`,
     password: localStorage.getItem('password'),
     email: localStorage.getItem('email'),
-    joinDate: new Date(),
+    joinDate: localStorage.getItem('joinDate'),
     img: 'https://randomuser.me/api/portraits/men/62.jpg',
     bio: localStorage.getItem('bio') ? localStorage.getItem('bio') : '',
     location: localStorage.getItem('location') ? localStorage.getItem('location') : '',
@@ -41,6 +41,7 @@ export default function UserContextProvider(props) {
       email: localStorage.getItem('email'),
       username: localStorage.getItem('username'),
       password: localStorage.getItem('password'),
+      joinDate: localStorage.getItem('joinDate'),
     });
   }, []);
 
@@ -49,6 +50,7 @@ export default function UserContextProvider(props) {
     localStorage.setItem('email', `${email}`);
     localStorage.setItem('username', `${username}`);
     localStorage.setItem('password', `${password}`);
+    localStorage.setItem('joinDate',`${new Date()}`);
   };
 
   return (
