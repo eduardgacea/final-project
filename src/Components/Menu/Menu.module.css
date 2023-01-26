@@ -15,6 +15,8 @@
   position: sticky;
   align-self: start;
   top: 1rem;
+  overflow-y: auto;
+  max-height: 100vh;
 }
 
 .logout {
