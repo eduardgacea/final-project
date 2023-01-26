@@ -54,14 +54,6 @@
   font-family: Roboto;
 }
 
-.composing button:hover {
-  background-color: black;
-  box-shadow: inset 0px 0px 3px rgb(29, 155, 240);
-  color: rgb(29, 155, 240);
-  font-weight: 700;
-  font-family: Roboto;
-}
-
 .actions {
   display: flex;
   justify-content: space-between;
