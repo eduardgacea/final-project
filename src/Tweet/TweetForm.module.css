@@ -58,3 +58,23 @@
   display: flex;
   justify-content: space-between;
 }
+
+.light {
+  background-color: rgb(185,205,215);
+  border-color: black;
+}
+
+.lightBtn {
+  background-color: transparent;
+  color: black;
+  box-shadow: inset 0 0 0 2px black;
+}
+
+.lightInput{
+  background-color: rgb(105,125,135) !important;
+  color: black !important;
+}
+
+.lightInput::placeholder{
+  color: black !important;
+}

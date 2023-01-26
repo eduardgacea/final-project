@@ -22,7 +22,6 @@ export default function ThemeContextProvider(props) {
       localStorage.removeItem('theme');
       localStorage.setItem('theme', 'dark');
     }
-    console.log(theme);
   };
 
   return <ThemeContext.Provider value={{ theme, toggleTheme }}>{props.children}</ThemeContext.Provider>;

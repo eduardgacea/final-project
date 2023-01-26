@@ -4,6 +4,7 @@ import { TweetContext } from '../Contexts/TweetContext';
 import Button from '../UI/Button';
 import classes from './TweetForm.module.css';
 import Modal from '../UI/Modal';
+import { ThemeContext } from '../Contexts/ThemeContext';
 
 export default function TweetForm() {
   const [isComposing, setIsComposing] = useState(false);
@@ -11,6 +12,7 @@ export default function TweetForm() {
   const [error, setError] = useState(false);
   const { createdUser } = useContext(UserContext);
   const { postNewTweet } = useContext(TweetContext);
+  const { theme } = useContext(ThemeContext);
 
   const inputChangeHandler = (event) => {
     setTweetInput(event.target.value);
@@ -27,7 +29,7 @@ export default function TweetForm() {
   };
 
   return (
-    <div className={classes.form}>
+    <div className={`${classes.form} ${theme === 'dark' ? classes.dark : classes.light}`}>
       {error && (
         <Modal
           title="Oops!"
@@ -41,10 +43,19 @@ export default function TweetForm() {
         <img className={classes.profileImg} src={createdUser.img} alt="Profile" />
       </div>
       <div className={`${classes.inputContainer} ${isComposing ? classes.composing : classes.notComposing}`}>
-        {isComposing && <input type="text" placeholder={`What's happening?`} onChange={inputChangeHandler} value={tweetInput} maxLength="280" />}
+        {isComposing && (
+          <input
+            className={`${theme === 'dark' ? classes.darkInput : classes.lightInput}`}
+            type="text"
+            placeholder={`What's happening?`}
+            onChange={inputChangeHandler}
+            value={tweetInput}
+            maxLength="280"
+          />
+        )}
         <div className={classes.actions}>
           {isComposing && (
-            <Button type="button" onClick={tweetPostHandler}>
+            <Button type="button" onClick={tweetPostHandler} className={`${classes.toggleTheme} ${theme === 'dark' ? classes.darkBtn : classes.lightBtn}`}>
               Tweet
             </Button>
           )}

@@ -42,7 +42,7 @@ export default function Menu(props) {
   return (
     <>
       {error && <Modal title={'Oops!'} body={'This section is a work in progress'} onHandleError={catchError} />}
-      <div className={`${classes.menu}${props.className ? ` ${props.className}` : ``}`}>
+      <div className={`${classes.menu} ${theme==='dark'? classes.dark : classes.light}`}>
         <div className={classes.top}>
           <img className={classes.logo} src={backToTopIcon} onClick={backToTopHandler} alt="logo" />
 
@@ -67,7 +67,7 @@ export default function Menu(props) {
           {windowWidth > 500 && <MenuItem throwError={throwError} icon={faBars} name="More" />}
         </div>
         <div className={classes.bot}>
-          <Button className={classes.toggleTheme} type="button" onClick={themeToggleHandler}>
+          <Button className={`${classes.toggleTheme} ${theme==='dark'? classes.darkBtn : classes.lightBtn}`} type="button" onClick={themeToggleHandler}>
             {windowWidth > 720 ? 'Toggle Theme' : 'Toggle'}
           </Button>
           <Button className={classes.logout} type="button" onClick={logOutHandler}>

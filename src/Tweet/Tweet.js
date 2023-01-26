@@ -6,9 +6,11 @@ import { Link } from 'react-router-dom';
 import classes from './Tweet.module.css';
 import DateElement from './DateElement';
 import { useWindowResize } from '../CustomHooks/useWindowResize';
+import { ThemeContext } from '../Contexts/ThemeContext';
 
 export default function Tweet(props) {
   const windowWidth = useWindowResize();
+  const { theme } = useContext(ThemeContext);
 
   let iconSize = 'lg';
 
@@ -31,21 +33,24 @@ export default function Tweet(props) {
   };
 
   return (
-    <div className={classes.tweet}>
+    <div className={`${classes.tweet} ${theme === 'dark' ? classes.dark : classes.light}`}>
       <div className={classes.profileImgContainer}>
         <img className={classes.profileImg} src={props.profileImg} alt="profile" />
       </div>
       <div className={classes.tweetContent}>
         <div className={classes.header}>
-          <Link to={props.tweet.authorId === '-1' ? `/profile` : `/user/${props.tweet.authorId}`} className={classes.author}>
+          <Link
+            to={props.tweet.authorId === '-1' ? `/profile` : `/user/${props.tweet.authorId}`}
+            className={`${classes.author} ${theme === 'dark' ? classes.darkTxt : classes.lightTxt}`}
+          >
             {props.author}
           </Link>
-          <div className={classes.username}>{props.username}</div>
+          <div className={`${classes.username} ${theme === 'dark' ? classes.darkTxt : classes.lightTxt}`}>{props.username}</div>
           <DateElement postDate={props.postDate} />
         </div>
 
         <Link style={{ textDecoration: 'none' }} to={`/post/${props.tweet.authorId}/${props.tweet.id}`}>
-          <div className={classes.body}>{props.content}</div>
+          <div className={`${classes.body} ${theme === 'dark' ? classes.darkTxt : classes.lightTxt}`}>{props.content}</div>
         </Link>
 
         <div className={classes.actions}>

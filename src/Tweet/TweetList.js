@@ -1,12 +1,14 @@
 import Tweet from './Tweet';
 import { useContext } from 'react';
-import { TweetContext } from '../Contexts/TweetContext'
+import { TweetContext } from '../Contexts/TweetContext';
 import classes from './TweetList.module.css';
+import { ThemeContext } from '../Contexts/ThemeContext';
 
 export default function TweetList(props) {
   const { getUserImgById, getAuthorById, getUsernameById } = useContext(TweetContext);
+  const { theme } = useContext(ThemeContext);
   return (
-    <div className={classes.tweetList}>
+    <div className={`${classes.tweetList} ${theme === 'dark' ? classes.dark : classes.light}`}>
       {props.tweets.map((tweet) => (
         <Tweet
           tweet={tweet}
@@ -23,7 +25,7 @@ export default function TweetList(props) {
           views={tweet.views}
         />
       ))}
-    <div className={classes.border} ></div>
+      <div className={classes.border}></div>
     </div>
   );
 }
