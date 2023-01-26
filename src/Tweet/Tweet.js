@@ -8,17 +8,16 @@ import DateElement from './DateElement';
 import { useWindowResize } from '../CustomHooks/useWindowResize';
 
 export default function Tweet(props) {
-  
   const windowWidth = useWindowResize();
 
   let iconSize = 'lg';
-  
-  if(windowWidth > 720) {
+
+  if (windowWidth > 720) {
     iconSize = 'lg';
-  }else if(windowWidth <= 720 && windowWidth > 405){
+  } else if (windowWidth <= 720 && windowWidth > 405) {
     iconSize = '1x';
-  }else if(windowWidth <= 405){
-    iconSize= 'sm';
+  } else if (windowWidth <= 405) {
+    iconSize = 'sm';
   }
 
   const { toggleBookmark, toggleLike } = useContext(TweetContext);
@@ -51,10 +50,12 @@ export default function Tweet(props) {
 
         <div className={classes.actions}>
           <div className={classes.action}>
-            <button className={classes.reply}>
-              <FontAwesomeIcon className={classes.iconReply} inverse icon={faComment} size={iconSize} />
-              {props.tweet.replies.length}
-            </button>
+            <Link style={{ textDecoration: 'none' }} to={`/post/${props.tweet.authorId}/${props.tweet.id}`}>
+              <button className={classes.reply}>
+                <FontAwesomeIcon className={classes.iconReply} inverse icon={faComment} size={iconSize} />
+                {props.tweet.replies.length}
+              </button>
+            </Link>
           </div>
           <div className={classes.action}>
             <button className={classes.retweet}>
