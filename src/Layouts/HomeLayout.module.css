@@ -1,13 +1,11 @@
 .wrapper{
   background-color: black;
   display: grid;
-  grid-template-columns: 180px 1fr 20vw;
+  grid-template-columns: 190px 1fr 20vw;
   column-gap: 3rem;
   padding: 1rem 12rem;
   padding-bottom: 20rem;
 }
-
-
 
 @media screen and (max-width: 1400px) {
   .wrapper{
@@ -37,11 +35,4 @@
     padding-left: 0rem;
     padding-right: 0rem;
   }
-}
-
-.backToTopBtn{
-  position: fixed;
-  top: 0;
-  left: 0;
-  color: red;
 }
