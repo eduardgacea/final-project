@@ -1,7 +1,7 @@
 import { createContext, useState, useContext } from 'react';
 import { UserContext } from './UserContext';
-import { Users } from '../../Data/Users';
-import { Tweets } from '../../Data/Tweets';
+import { Users } from '../Data/Users'
+import { Tweets } from '../Data/Tweets';
 
 const TweetContext = createContext(null);
 

@@ -5,10 +5,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useState, useContext } from 'react';
 import Modal from '../../UI/Modal';
 import Button from '../../UI/Button';
-import { UserContext } from '../../Contexts/UserContext/UserContext';
+import { UserContext } from '../../Contexts/UserContext'
 import { useNavigate, Link } from 'react-router-dom';
 import backToTopIcon from '../../Assets/backToTopIcon.svg';
-import { ThemeContext } from '../../Contexts/UserContext/ThemeContext';
+import {ThemeContext} from '../../Contexts/ThemeContext';
 import { useWindowResize } from '../../CustomHooks/useWindowResize';
 
 export default function Menu(props) {

@@ -1,7 +1,7 @@
 import TweetList from '../../Tweet/TweetList';
 import TweetForm from '../../Tweet/TweetForm';
 import { useContext, useEffect } from 'react';
-import { TweetContext } from '../../Contexts/UserContext/TweetContext';
+import { TweetContext } from '../../Contexts/TweetContext';
 
 export default function Home() {
   const { allTweets, filteredTweets, setFilteredTweets } = useContext(TweetContext);

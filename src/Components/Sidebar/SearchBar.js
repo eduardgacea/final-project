@@ -1,7 +1,7 @@
 import classes from './SearchBar.module.css';
 import searchIcon from '../../Assets/searchIcon.svg';
 import { useContext } from 'react';
-import { TweetContext } from '../../Contexts/UserContext/TweetContext';
+import { TweetContext } from '../../Contexts/TweetContext';
 
 export default function SearchBar() {
   const { setFilteredTweets, allTweets } = useContext(TweetContext);

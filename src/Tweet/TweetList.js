@@ -1,6 +1,6 @@
 import Tweet from './Tweet';
 import { useContext } from 'react';
-import { TweetContext } from '../Contexts/UserContext/TweetContext';
+import { TweetContext } from '../Contexts/TweetContext'
 import classes from './TweetList.module.css';
 
 export default function TweetList(props) {

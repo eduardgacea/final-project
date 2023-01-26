@@ -1,6 +1,6 @@
 import { useState, useContext } from 'react';
-import { UserContext } from '../Contexts/UserContext/UserContext';
-import { TweetContext } from '../Contexts/UserContext/TweetContext';
+import { UserContext } from '../Contexts/UserContext';
+import { TweetContext } from '../Contexts/TweetContext';
 import Button from '../UI/Button';
 import classes from './TweetForm.module.css';
 import Modal from '../UI/Modal';

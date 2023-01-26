@@ -1,7 +1,7 @@
 import classes from './Post.module.css';
 import { useParams, Link } from 'react-router-dom';
 import { useContext, useState } from 'react';
-import { TweetContext } from '../../Contexts/UserContext/TweetContext';
+import { TweetContext } from '../../Contexts/TweetContext';  
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faComment, faRetweet, faHeart, faChartSimple, faBookmark, faHandsAmericanSignLanguageInterpreting } from '@fortawesome/free-solid-svg-icons';
 import DateElement from '../../Tweet/DateElement';

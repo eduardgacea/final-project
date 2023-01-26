@@ -1,5 +1,5 @@
 import { useContext, useReducer, useState } from 'react';
-import { UserContext } from '../../Contexts/UserContext/UserContext';
+import { UserContext } from '../../Contexts/UserContext';
 import { Link, useNavigate } from 'react-router-dom';
 import classes from './Authenticate.module.css';
 import Button from '../../UI/Button';

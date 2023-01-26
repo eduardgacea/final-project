@@ -1,5 +1,5 @@
 import { useReducer, useContext } from 'react';
-import { UserContext } from '../../Contexts/UserContext/UserContext';
+import { UserContext } from '../../Contexts/UserContext';
 import { Link } from 'react-router-dom';
 import classes from './CreateAccount.module.css';
 import Button from '../../UI/Button';

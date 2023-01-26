@@ -1,6 +1,6 @@
 import { useContext, useState, useReducer, useEffect } from 'react';
-import { UserContext } from '../../Contexts/UserContext/UserContext';
-import { TweetContext } from '../../Contexts/UserContext/TweetContext';
+import { UserContext } from '../../Contexts/UserContext';
+import { TweetContext } from '../../Contexts/TweetContext';
 import { faCalendarDays } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import classes from './Profile.module.css';

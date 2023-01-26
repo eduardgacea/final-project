@@ -1,5 +1,5 @@
 import { createContext, useState, useEffect } from 'react';
-import { Users } from '../../Data/Users';
+import { Users } from '../Data/Users';
 
 const UserContext = createContext(null);
 

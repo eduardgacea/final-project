@@ -1,6 +1,6 @@
 import classes from './UserPage.module.css';
 import { useState, useContext } from 'react';
-import { UserContext } from '../../Contexts/UserContext/UserContext';
+import { UserContext } from '../../Contexts/UserContext';
 import { useParams } from 'react-router-dom';
 import { getUserById } from '../../Data/Users';
 import { faCalendarDays } from '@fortawesome/free-solid-svg-icons';

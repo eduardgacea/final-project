@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faComment, faRetweet, faHeart, faChartSimple, faBookmark } from '@fortawesome/free-solid-svg-icons';
 import { useContext } from 'react';
-import { TweetContext } from '../Contexts/UserContext/TweetContext';
+import { TweetContext } from '../Contexts/TweetContext';
 import { Link } from 'react-router-dom';
 import classes from './Tweet.module.css';
 import DateElement from './DateElement';

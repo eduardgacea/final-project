@@ -1,7 +1,7 @@
 import classes from './RepliesList.module.css';
 import Reply from './Reply';
 import { useContext } from 'react';
-import { TweetContext } from '../../Contexts/UserContext/TweetContext';
+import { TweetContext } from '../../Contexts/TweetContext';
 
 export default function RepliesList(props) {
   const { getUserImgById, getAuthorById, getUsernameById } = useContext(TweetContext);
